@@ -13,10 +13,10 @@ double inputPositive(const string& prompt) {
             if (value > 0) {
                 return value;
             } else {
-                cout << "Помилка: число має бути > 0." << endl;
+                cout << "error: number must be > 0." << endl;
             }
         } else {
-            cout << "Помилка: введіть число." << endl;
+            cout << "Error.Enter the number" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
@@ -24,9 +24,9 @@ double inputPositive(const string& prompt) {
 }
 
 int main() {
-    setlocale(LC_ALL, "ukr");
+    setlocale(LC_ALL, "eng");
 
-    double x = inputPositive("Введіть x: ");
+    double x = inputPositive("enter x: ");
     double result = log2(x);
 
     cout << "log2(" << x << ") = " << result << endl;
